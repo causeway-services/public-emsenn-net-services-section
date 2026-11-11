@@ -1,4 +1,4 @@
 [submodule "frontstage"]
 	path = frontstage
-	url = https://github.com/causeway-services/frontstage.git
+	url = https://github.com/causeway-services/public-frontstage-services-section.git
 	branch = main
