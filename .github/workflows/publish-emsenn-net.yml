@@ -31,7 +31,7 @@ jobs:
           # or the manual submodule init below would bypass the SSH agent.
           persist-credentials: false
 
-      - name: Set up deploy keys (theme read + frontstage write)
+      - name: Set up deploy keys (theme read + public-frontstage-services-section write)
         uses: webfactory/ssh-agent@v0.9.0
         with:
           ssh-private-key: ${{ secrets.EMSENN_NET_DEPLOY_KEY }}
@@ -56,7 +56,7 @@ jobs:
       - name: Build Pagefind search index
         run: npx -y pagefind@latest --site public
 
-      - name: Mirror build into frontstage and publish
+      - name: Mirror build into public-frontstage-services-section and publish
         run: |
           set -euo pipefail
           git clone --depth 1 git@github.com:emsenn/emsenn-net-frontstage.git out

@@ -7,9 +7,9 @@
 The emsenn.net production site, in two acts:
 
 - `backstage/` — Hugo source (content, config, theme)
-- `frontstage/` — built HTML, published via GitHub Pages as `emsenn.net`
+- `public-frontstage-services-section/` — built HTML, published via GitHub Pages as `emsenn.net`
 
-Edit in `backstage/`; `frontstage/` is CI-published output, not hand-edited.
+Edit in `backstage/`; `public-frontstage-services-section/` is CI-published output, not hand-edited.
 
 ## Publishing (one command)
 
@@ -36,8 +36,8 @@ takes precedence over the apt package on `PATH`.
 Verified 2026-07-23: theme submodule initializes over SSH
 (`git submodule update --init --recursive`), a full local build with the
 pinned-current Hugo produces the same 1063-page route set as the live
-`frontstage/` checkout (differences limited to the Pagefind index, which is a
-separate CI step, and files `frontstage/` intentionally excludes), SSH push
+`public-frontstage-services-section/` checkout (differences limited to the Pagefind index, which is a
+separate CI step, and files `public-frontstage-services-section/` intentionally excludes), SSH push
 authenticates against `origin` (`git push --dry-run` succeeded), and `gh run
 list --workflow=publish-emsenn-net.yml` reaches the real workflow history.
 The end-to-end script itself (commit → push → watched CI run) was not run
@@ -59,9 +59,9 @@ touching no content. Nothing is sitting ready to publish.
 The emsenn.net production site, in two acts:
 
 - `backstage/` — Hugo source (content, config, theme)
-- `frontstage/` — built HTML, published via GitHub Pages as `emsenn.net`
+- `public-frontstage-services-section/` — built HTML, published via GitHub Pages as `emsenn.net`
 
-Edit in `backstage/`; `frontstage/` is CI-published output, not hand-edited.
+Edit in `backstage/`; `public-frontstage-services-section/` is CI-published output, not hand-edited.
 
 ## Publishing (one command)
 
@@ -88,8 +88,8 @@ takes precedence over the apt package on `PATH`.
 Verified 2026-07-23: theme submodule initializes over SSH
 (`git submodule update --init --recursive`), a full local build with the
 pinned-current Hugo produces the same 1063-page route set as the live
-`frontstage/` checkout (differences limited to the Pagefind index, which is a
-separate CI step, and files `frontstage/` intentionally excludes), SSH push
+`public-frontstage-services-section/` checkout (differences limited to the Pagefind index, which is a
+separate CI step, and files `public-frontstage-services-section/` intentionally excludes), SSH push
 authenticates against `origin` (`git push --dry-run` succeeded), and `gh run
 list --workflow=publish-emsenn-net.yml` reaches the real workflow history.
 The end-to-end script itself (commit → push → watched CI run) was not run
